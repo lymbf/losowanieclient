@@ -1,38 +1,71 @@
+
+:root {
+    --bg-color: #071010;
+    --font-primary-color: #EE9750;
+    --font-secondary-color: #F8C88D;
+    --header-height: 200px;
+    --hall-left-width: 300px;
+    --sign-post-height: 600px;
+    --sign-post-width: 600px;
+    --sign-post-font-size: 28px;
+}
+
+body, div {
+    position: relative;
+}
+
+#root {
+    height: 100%;
+}
+
 .App {
-  text-align: center;
+    text-align: center;
+    background-color: var(--bg-color);
+
+    height: 100%;
+    width: 100%;
+    /*position: relative;*/
+    box-sizing: border-box;
+    font-family: 'Mountains of Christmas', serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media screen and (max-height: 1050px){
+    .App{
+        height: auto;
+        min-height: 100%;
+    }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    height: 100vh;
+    width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.error {
+    color: #fd5151;
+    font-size: 16px;
+    z-index: 5;
+    font-weight: bold;
+    opacity: 1;
+    font-family: sans-serif;
+    margin: 5px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.form-error {
+    font-size: 20px;
+    margin-top: 30px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hov:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
 }

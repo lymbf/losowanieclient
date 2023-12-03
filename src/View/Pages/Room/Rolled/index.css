@@ -1,0 +1,17 @@
+
+.rolled{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.rolled-title{
+    font-size: 42px;
+}
+
+.rolled-person{
+    margin-top: 30px;
+    font-size: 72px;
+    color: var(--font-secondary-color)
+}

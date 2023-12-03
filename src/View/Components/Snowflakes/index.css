@@ -1,0 +1,16 @@
+
+
+.snowflake{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-size: cover;
+}
+
+.s1{
+    background-image: url('https://assets.codepen.io/32887/flake1.svg');
+}
+
+.s2{
+    background-image: url('https://assets.codepen.io/32887/flake2.svg');
+}

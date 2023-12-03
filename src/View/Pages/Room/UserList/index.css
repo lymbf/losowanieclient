@@ -1,0 +1,42 @@
+.UserList{
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    margin-top: 20px;
+
+}
+
+.ul-title{
+    margin-bottom: 40px;
+}
+
+.ul-user{
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: var(--font-secondary-color);
+    font-family: sans-serif;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.ul-user-name{
+    position: relative;
+}
+
+.ul-user span{
+    color: var(--font-primary-color);
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -40px;
+
+}
+
+.ul-title span{
+    color: var(--font-secondary-color);
+    text-transform: uppercase;
+}
+

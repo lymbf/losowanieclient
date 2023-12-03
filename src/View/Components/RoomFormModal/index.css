@@ -1,0 +1,65 @@
+.RoomFormModal{
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.64);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shadow{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.RoomFormModal form{
+    position: relative;
+    z-index: 2;
+
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: 'Mountains of Christmas', serif;
+    font-size: 44px;
+}
+
+.RoomFormModal form .Input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.RoomFormModal form .Input input{
+    margin-top: 20px;
+    min-height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    font-size: 26px;
+    letter-spacing: 1px;
+    text-align: center;
+    font-family: 'Mountains of Christmas', serif;
+    font-weight: bold;
+}
+
+.RoomFormModal form button{
+    min-height: 45px;
+    font-size: 24px;
+    font-family: 'Mountains of Christmas', serif;
+    font-weight: bold;
+    letter-spacing: 3px;
+    background-color: #2a2929;
+    width: 100%;
+    color: white;
+    margin-top: 30px;
+}

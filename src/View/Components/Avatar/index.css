@@ -1,0 +1,18 @@
+.hall-avatar{
+    display: flex;
+    font-size: 34px;
+    align-items: center;
+
+}
+
+.hall-avatar > span{
+    font-size: 34px;
+}
+
+.hall-avatar > div{
+    margin-left: 30px;
+}
+
+.hall-avatar > div:last-child{
+    font-size: 18px;
+}

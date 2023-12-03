@@ -1,0 +1,127 @@
+.MainHall{
+    display: flex;
+    height: 100%;
+    display: flex;
+    color: white;
+}
+
+.MainHall > div{
+
+    display: flex;
+
+}
+
+.hall-left{
+    align-items:flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 50px 30px;
+    width: var(--hall-left-width)
+}
+
+.hall-left > div{
+    width: 100%;
+
+}
+
+.hall-right{
+    align-items: flex-end;
+    justify-content: center;
+    width: calc(100% - var(--hall-left-width));
+
+}
+
+
+
+.my-rooms{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+
+.my-rooms-title{
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+
+.my-rooms-list{
+    font-size: 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.my-rooms-list > div{
+    margin-bottom: 12px;
+    color: var(--font-secondary-color)
+}
+
+.signpost{
+    background-image: url("signpost.svg");
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: left;
+    width: var(--sign-post-width);
+    height: var(--sign-post-height);
+}
+
+.join-room{
+    position: absolute;
+    top: calc(var(--sign-post-height) / 2 - var(--sign-post-font-size) / 1.6);
+    left: calc(var(--sign-post-width) / 9);
+    transform: rotateZ(-5deg);
+    font-size: var(--sign-post-font-size);
+    font-weight: bold;
+    color: black;
+}
+
+.create-room{
+    position: absolute;
+    top: calc(var(--sign-post-height) / 2.15 - var(--sign-post-font-size) / 1.6);
+    right: calc(var(--sign-post-width) / 6);
+    transform: rotateZ(-5deg);
+    font-size: var(--sign-post-font-size);
+    font-weight: bold;
+    color: black;
+}
+
+@media screen and (max-width: 920px){
+    .MainHall{
+        flex-direction: column;
+        align-items: center;
+    }
+    .hall-left{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hall-right{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    :root{
+        --sign-post-width: 500px;
+        --sign-post-height: 500px;
+        --sign-post-font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 470px){
+    :root{
+        --sign-post-width: 400px;
+        --sign-post-height: 400px;
+        --sign-post-font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    :root{
+        --sign-post-width: 300px;
+        --sign-post-height: 300px;
+        --sign-post-font-size: 17px;
+    }
+}

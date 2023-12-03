@@ -1,0 +1,45 @@
+.Login{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.Login form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.Login label{
+    font-size: 36px;
+}
+
+.Login .Input{
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.Login input{
+    font-size: 26px;
+    padding: 5px 10px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+.Login button{
+    margin-top: 20px;
+    height: 30px;
+    width: 100%;
+    min-height: 40px;
+    background-color: #101010;
+    color: white;
+    font-family: 'Mountains of Christmas', serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+

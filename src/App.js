@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Snow from "./View/Components/Snow/snow";
+import Header from "./View/Header";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import MainPage from "./View/Pages/MainPage";
+import useInit from "./Application/init";
+import Error404 from "./View/404";
+import Login from "./View/Pages/Login";
+import SingUp from "./View/Pages/Singup";
+import Room from "./View/Pages/Room";
+import {useSelector} from "react-redux";
 
 function App() {
+    const loggedIn = useSelector(state=>state.user.loggedIn)
+    useInit()
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Snow/>
+        <Header/>
+        <BrowserRouter>
+            <Routes>
+                <Route path = '/' element = {<MainPage/>} />
+                <Route path = '/login' element={<Login/>}/>
+                <Route path = '/signup' element={<SingUp/>}/>
+                <Route path = '/room/:id' element = {loggedIn ? <Room/> : <MainPage/>}/>
+                <Route path = '/*' element = {<Error404/>}/>
+            </Routes>
+        </BrowserRouter>
     </div>
   );
 }
