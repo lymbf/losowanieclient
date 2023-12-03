@@ -29,7 +29,7 @@ body, div {
     font-family: 'Mountains of Christmas', serif;
 }
 
-@media screen and (max-height: 1050px){
+@media screen and (max-height: 800px){
     .App{
         height: auto;
         min-height: 100%;
