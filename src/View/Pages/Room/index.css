@@ -41,6 +41,18 @@
     border-radius: 20px;
 }
 
+.go-back{
+    display: flex;
+    font-size: 30px;
+    margin-top: 50px;
+    align-items: center;
+}
+
+.go-back span{
+    font-size: 60px;
+    margin-right: 20px;
+}
+
 @media screen and (max-width: 700px){
     .Room{
         flex-direction: column;

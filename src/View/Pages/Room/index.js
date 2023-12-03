@@ -7,14 +7,16 @@ import Avatar from "../../Components/Avatar";
 import NotRolled from "./NotRolled";
 import Rolled from "./Rolled";
 import UserList from "./UserList";
+import {useNavigate} from "react-router-dom";
 
 export default function Room() {
     const fetchError = useSelector(state => state.errors.room.fetch);
     const leaveError = useSelector(state => state.errors.room.leave);
-    const rollError = useSelector(state=>state.errors.room.roll)
+    const rollError = useSelector(state => state.errors.room.roll)
     const userId = useSelector(state => state.user._id)
     const {host, name, rolled, users} = useSelector(state => state.rooms.currentRoom)
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const {rollGifts, leaveRoom, unroll} = useRoom();
     return (
         <div className='Room'>
@@ -24,15 +26,23 @@ export default function Room() {
                     <Avatar logout={() => {
                         dispatch(logOut())
                     }}/>
-                    <div className='leave-room hov' onClick = {leaveRoom} >Leave Room</div>
+                    <div className='leave-room hov' onClick={leaveRoom}>Leave Room</div>
                 </div>
                 {leaveError && <div className='error leave-error'>{leaveError}</div>}
                 {rolled ? <Rolled/> : <NotRolled/>}
 
                 {((host) && userId.toString() === host.toString()) && !rolled &&
-                    <div className='roll-button hov' onClick = {rollGifts}>{rolled ? 'losuj ponownie' : 'losuj'}</div>}
-                {rollError &&  <div className = 'error rolling-error'>{rollError && rollError}</div>}
-                {((host) && userId.toString() === host.toString()) && rolled && <div className = 'roll-button unroll hov' onClick ={unroll}>cofnij losowanie</div>}
+                    <div className='roll-button hov' onClick={rollGifts}>{rolled ? 'losuj ponownie' : 'losuj'}</div>}
+                {rollError && <div className='error rolling-error'>{rollError && rollError}</div>}
+                {((host) && userId.toString() === host.toString()) && rolled &&
+                    <div className='roll-button unroll hov' onClick={unroll}>cofnij losowanie</div>}
+
+                <div className='go-back hov' onClick = {()=>{navigate('/')}}>
+                    <span className="material-symbols-outlined">
+                            arrow_back
+                    </span>
+                    <div>Wróć do lobby</div>
+                </div>
             </div>
             <div className='room-right'><UserList/></div>
         </div>
