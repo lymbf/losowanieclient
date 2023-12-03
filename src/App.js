@@ -10,12 +10,15 @@ import Login from "./View/Pages/Login";
 import SingUp from "./View/Pages/Singup";
 import Room from "./View/Pages/Room";
 import {useSelector} from "react-redux";
+import Loading from "./View/Components/Loading";
 
 function App() {
     const loggedIn = useSelector(state=>state.user.loggedIn)
+    const loading = useSelector(state=>state.lifecycle.loading);
     useInit()
   return (
     <div className="App">
+        {loading && <Loading/>}
         <Snow/>
         <Header/>
         <BrowserRouter>

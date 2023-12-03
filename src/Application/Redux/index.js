@@ -4,4 +4,5 @@ import user from './Reducers/user';
 import forms from "./Reducers/forms";
 import rooms from "./Reducers/rooms";
 import fetch from "./Reducers/fetch";
-export default combineReducers({errors, user, forms, rooms, fetch})
+import lifecycle from "./Reducers/lifecycle";
+export default combineReducers({errors, user, forms, rooms, fetch, lifecycle})
