@@ -23,6 +23,7 @@ export default function useLogin() {
                 loggedIn: true,
                 jwt: res.jwt
             }))
+            localStorage.setItem('jwt', res.jwt)
             navigate('/')
         }).catch(err => {
             dispatch(setError({type: 'forms', field: 'login', value: err.message}))

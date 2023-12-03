@@ -23,6 +23,7 @@ export default function useSignup() {
                 loggedIn: true,
                 jwt: res.jwt
             }))
+            localStorage.setItem('jwt', res.jwt)
             navigate('/')
         }).catch(err => {
             console.log(err)

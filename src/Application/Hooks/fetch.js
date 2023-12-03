@@ -2,7 +2,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {clearLifecycleField, setLifecycleField} from "../Redux/Reducers/lifecycle";
 
 export default function useFetch(){
-    let jwt = useSelector(state=>state.user.jwt);
+    let jwt = localStorage.getItem('jwt')
     const dispatch = useDispatch();
     const loading = useSelector(state=>state.lifecycle.loading)
 

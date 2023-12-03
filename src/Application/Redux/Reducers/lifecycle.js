@@ -1,6 +1,6 @@
 const SET_FIELD = 'lifecycle/setField';
 const CLEAR_FIELD = 'lifecycle/clearField';
-export default function lifecycle(state = {loading: false}, action){
+export default function lifecycle(state = {loading: true}, action){
     let data = {...state}
     const {field, value} = action.payload || false;
     switch(action.type){
